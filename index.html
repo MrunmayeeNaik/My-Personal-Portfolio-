@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/LOGO1.png" class="LOGO">
+            <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Data Enthusiast</p>
+            <h1>Hello, I'm <span>Mrunmayee Naik</span></h1>
+        </div>
+    </div>
+</div>
+<!---------------------------------------------about---------------------------------------------------------->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>I'm a Computer Science Engineer with specialization of Data Science and honors
+                    in AI & ML.With a CGPA of 9.10, I have successfully completed my Bachelor of Engineering at 
+                    Vidyavardhini's College of Engineering & Technology in 2024</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming Languages</span><br>Python , SQL , R</li>
+                        <li><span>Tools and Technology</span><br>Excel , PowerBI , Tableau , MySQL Workbench</li>
+                        <li><span>Libraries</span><br>Numpy , Pandas , Sklearn , Matplotlib , Seaborn</li>
+                        <li><span>Machine Learning</span><br>K-Means , NLP , Random Forest , Regression Models</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Nov 2023</span><br>Data Analytics & Visualization Job Simulation </li>
+                        <li><span>Dec 2022</span><br>Machine Learning Intern - TechQ Konnect </li>
+                        <li><span>Jun 2022- Jul 2022</span><br>Data Science Intern - MMRDA </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2024-2020</span><br>B.E Computer Science(data Science) - Vidyavardhini's College of Engineering & Technology</li>
+                        <li><span>2024-2022</span><br>Honors in AI & ML - Vidyavardhini's College of Engineering & Technology</li>
+                        <li><span>2020-2018</span><br>XII Science - Annasaheb Vartak College</li>
+                        <li><span>2018</span><br>Xth - Dr N.P Shah English School </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------------------------------Portfolio------------------------------------------------->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/working1.png">
+                <div class="layer">
+                    <h3>Sales Data Analysis</h3>
+                    <p>description about project</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/workk-2.jpg">
+            </div>
+            <div class="work">
+                <img src="images/work-3.jpg">
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+</body>
+</html>
